@@ -84,7 +84,7 @@ is via [OPAM](https://opam.ocaml.org/doc/Install.html):
 
 ```shell
 opam repo add coq-released https://coq.inria.fr/opam/released
-opam install coq-{{ shortname }}
+opam install {{ shortname }}
 ```
 
 To instead build and install manually, do:
@@ -92,7 +92,7 @@ To instead build and install manually, do:
 ``` shell
 git clone https://github.com/{{ organization }}/{{ shortname }}
 cd {{ shortname }}
-make   # or make -j <number-of-cores-on-your-machine>
+make {{& target }}  # or make -j <number-of-cores-on-your-machine> {{& target}}
 make install
 ```
 {{/ build }}
